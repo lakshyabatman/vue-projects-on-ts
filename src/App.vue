@@ -1,12 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Todos</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <Footer/>
   </div>
 </template>
+
+<script lang="ts">
+import Footer from '@/components/Footer'
+import {Vue, Component} from 'vue-property-decorator';
+
+@Component({
+  components: {
+    Footer
+  }
+})
+export default class App extends Vue{
+  
+}
+</script>
 
 <style>
 #app {
@@ -15,6 +30,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin:0;
+  padding: 0;
 }
 
 #nav {
